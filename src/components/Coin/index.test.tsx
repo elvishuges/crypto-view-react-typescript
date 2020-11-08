@@ -4,5 +4,5 @@ import { Coin } from './index';
 
 it('Check coin label', () => {
     render(<Coin coin="BTC" currentPrice={0} oldPrice={0} />)
-    expect(screen.getByText('BTC'));
+    expect(screen.getByText('BTC')).toBeInTheDocument();
 })
