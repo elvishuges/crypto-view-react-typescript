@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import React from 'react'
 import { Coin } from "../Coin";
 import { cryptoHttp } from '../../http';
 import "./index.css";
