@@ -19,7 +19,7 @@ export const Coin: React.FC<CoinProps> = (props) => {
     return (
         <div className={classes.join(' ')}>
             <span>{coin}</span>
-            <span>Reais ${currentPrice.toLocaleString()}</span>
+            <span>R${currentPrice.toLocaleString()}</span>
         </div>
     )
 }
