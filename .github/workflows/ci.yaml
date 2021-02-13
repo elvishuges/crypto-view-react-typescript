@@ -2,7 +2,7 @@ on : push
 name : 🚀 Implementar website em
 jobs push :
    web-deploy :
-     name : 🎉 Implementar
+    name : 🎉 Implementar
     runs-on : ubuntu-latest
     steps :
     - name : 🚚 Obter o código mais recente
