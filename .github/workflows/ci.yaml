@@ -1,22 +1,16 @@
-name: CI
-on:
-  push:
-    branches:
-      - master
+on : push
+name : 🚀 Implementar website em
+jobs push :
+   web-deploy :
+     name : 🎉 Implementar
+    runs-on : ubuntu-latest
+    steps :
+    - nome : 🚚 Obter o código mais recente
+      usa : actions/checkout@v2.3.2
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v1
-      - name: Get Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - name: Install dependencies
-        run: npm install
-      - name: Testing
-        run: CI=true npm test
-      - name: Build
-        run: npm run build
+    - nome : 📂 Os arquivos de sincronização
+      usam : SamKirkland/FTP-Deploy-Action@4.0.0
+      com :
+         servidor : files.000webhost.com
+        nome de usuário : sistemahuges
+        senha : $ {{SSH_SECRET}}
