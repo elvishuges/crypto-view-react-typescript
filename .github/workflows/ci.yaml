@@ -1,17 +1,4 @@
-on : push
-name : 🚀 Implementar website em
-jobs push :
-   web-deploy :
-    name : 🎉 Implementar
-    runs-on : ubuntu-latest
-    steps :
-    - name : 🚚 Obter o código mais recente
-      usa : actions/checkout@v2.3.2
-
-    - nome : 📂 Os arquivos de sincronização
-      usam : SamKirkland/FTP-Deploy-Action@4.0.0
-      com :
-         servidor : files.000webon: push
+on: push
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
@@ -26,6 +13,4 @@ jobs:
       with:
         server: ftp.samkirkland.com
         username: myFtpUserName
-        password: ${{ secrets.ftp_password }}host.com
-        nome de usuário : sistemahuges
-        senha : $ {{SSH_SECRET}}
+        password: ${{ secrets.ftp_password }}
